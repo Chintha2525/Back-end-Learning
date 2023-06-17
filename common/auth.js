@@ -29,7 +29,7 @@ const validate = async(req, res, next) => {
         }
         else
         {
-            res.status(400).send({message : "Token Expired"})
+            res.status(401).send({message : "Token Expired"})
         }
     }
         else
@@ -50,7 +50,7 @@ const roleAdminGaurd = async(req, res, next) => {
         }
         else
         {
-            res.status(400).send({message : "Only Admin's are Allowed"})
+            res.status(401).send({message : "Only Admin's are Allowed"})
         }
     }
         else
